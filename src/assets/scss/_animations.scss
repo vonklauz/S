@@ -1,0 +1,149 @@
+@keyframes slideout {
+
+  from {
+    width: 12%;
+  }
+
+  to {
+    width: calc(100vw - 33px);
+  }
+
+}
+
+@keyframes slidein1 {
+
+  from {
+    margin-left: initial;
+  }
+
+  to {
+    margin-left: calc(-1 * (100vw - 33px) / 4 * 1);
+  }
+
+}
+
+@keyframes slidein2 {
+
+  from {
+    margin-left: initial;
+  }
+
+  to {
+    margin-left: calc(-1 * (100vw - 33px) / 4 * 2);
+  }
+
+}
+
+@keyframes slidein3 {
+
+  from {
+    margin-left: initial;
+  }
+
+  to {
+    margin-left: calc(-1 * (100vw - 33px) / 4 * 3);
+  }
+
+}
+
+@keyframes openHamburger {
+  from {
+    transform: rotateZ(90deg);
+    width: 31px;
+  }
+
+  50% {
+    transform: rotateZ(0deg);
+    width: 31px;
+  }
+
+  to {
+    transform: rotateZ(0deg);
+    width: calc(100% - 42px);
+  }
+}
+
+@keyframes openedHamburger {
+  from {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  to {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@keyframes showLink {
+  from {
+    visibility: hidden;
+    width: 0;
+    opacity: 0;
+  }
+
+  50% {
+    width: 70px;
+    // padding: 0 5px;
+    visibility: visible;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollLeft {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -350%;
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    right: -200%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes hobbyScrolled {
+  from {
+    top: 60px;
+    left: calc(50% - 62px);
+  }
+
+  50% {
+    left: -16px;
+  }
+
+  to {
+    top: 116px;
+  }
+}
+
+@keyframes projectScrolled {
+  from {
+    top: 127px;
+    right: -68px;
+  }
+
+  50% {
+    right: calc(100% - 145px);
+    // left: -68px;
+  }
+
+  to {
+    top: calc(50% - 11px);
+  }
+}

@@ -1,0 +1,183 @@
+input[type="checkbox"] {
+
+  +label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 18px;
+    cursor: pointer;
+  }
+
+
+  &:checked {
+    position: absolute;
+    left: -9999px;
+
+    + {
+      label {
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 5px;
+          width: 18px;
+          height: 18px;
+          border: 1px solid #E5E5E5;
+          background-color: #fff;
+          border-radius: 2px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+          left: 2px;
+          top: 9px;
+          width: 14px;
+          height: 7px;
+          border-radius: 1px;
+          border-left: 2px solid $gold;
+          border-bottom: 2px solid $gold;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &:not(:checked) {
+    position: absolute;
+    left: -9999px;
+
+    + {
+      label {
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 5px;
+          width: 18px;
+          height: 18px;
+          border: 1px solid #E5E5E5;
+          background-color: #ffffff;
+          border-radius: 2px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+          left: 2px;
+          top: 9px;
+          width: 14px;
+          height: 7px;
+          border-radius: 1px;
+          border-left: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+// input[type="radio"] {
+//   &:checked {
+//     position: absolute;
+//     left: -9999px;
+
+//     + {
+//       label {
+//         display: inline-block;
+//         position: relative;
+//         padding-left: 28px;
+//         line-height: 20px;
+//         cursor: pointer;
+
+//         &:before {
+//           content: "";
+//           position: absolute;
+//           left: 0px;
+//           top: 0px;
+//           width: 18px;
+//           height: 18px;
+//           border: 2px solid $gold;
+//           background-color: #fff;
+//           border-radius: 100%;
+//         }
+
+//         &:after {
+//           content: "";
+//           position: absolute;
+//           -webkit-transition: all 0.2s ease;
+//           transition: all 0.2s ease;
+//           width: 14px;
+//           height: 14px;
+//           border-radius: 100%;
+//           background-color: $gold;
+//           border-left: 4px solid $gold;
+//           border-bottom: 4px solid $gold;
+//           left: 4px;
+//           top: 4px;
+//           width: 10px;
+//           height: 10px;
+//           border-radius: 100%;
+//           opacity: 1;
+//         }
+//       }
+//     }
+//   }
+
+//   &:not(:checked) {
+//     position: absolute;
+//     left: -9999px;
+
+//     + {
+//       label {
+//         display: inline-block;
+//         position: relative;
+//         padding-left: 28px;
+//         line-height: 20px;
+//         cursor: pointer;
+
+//         &:before {
+//           content: "";
+//           position: absolute;
+//           left: 0px;
+//           top: 0px;
+//           width: 18px;
+//           height: 18px;
+//           background-color: #fff;
+//           border: 2px solid #000000;
+//           border-radius: 100%;
+//         }
+
+//         &:after {
+//           content: "";
+//           position: absolute;
+//           -webkit-transition: all 0.2s ease;
+//           transition: all 0.2s ease;
+//           width: 14px;
+//           height: 14px;
+//           border-radius: 100%;
+//           background-color: #FFC857;
+//           border-left: 4px solid #FFC857;
+//           border-bottom: 4px solid #FFC857;
+//           left: 4px;
+//           top: 4px;
+//           width: 10px;
+//           height: 10px;
+//           border-radius: 100%;
+//           opacity: 0;
+//         }
+//       }
+//     }
+//   }
+// }

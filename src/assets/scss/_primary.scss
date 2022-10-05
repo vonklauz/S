@@ -1,0 +1,272 @@
+.primary {
+  padding-left: 33px;
+
+  .section-slider {
+    display: flex;
+    width: calc(200vw - 33px);
+    overflow: hidden;
+  }
+
+  .section {
+    width: calc((100vw - 33px) / 4);
+    background-position: top right;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 56vh;
+
+    .section-img {
+      position: absolute;
+      height: 100%;
+    }
+  }
+
+  [data-name="about"] {
+    background-color: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
+    transition: all .5s;
+    position: relative;
+
+    .slide-1 {
+      background-color: #FCA929;
+    }
+
+    .slide-2 {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 0;
+
+      iframe,
+      video {
+        width: 100%;
+        height: 50%;
+      }
+
+      .transparent-btn {
+        width: 19px;
+        border: none;
+        background: none;
+        margin: 16px 26px 0 0;
+        padding: 0;
+
+        img {
+          width: 100%;
+          position: initial;
+        }
+      }
+    }
+
+    .slide-3 {
+      position: absolute;
+      background-color: #FCA929;
+      width: 200vw;
+      height: 100%;
+      right: -200%;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        left: 50px;
+      }
+
+      .section-name {
+        right: unset;
+        left: -70px;
+      }
+
+      .about {
+        width: 50%;
+        height: 100%;
+        padding: 72px 42px 54px 52px;
+      }
+
+      &__scrolled {
+        animation: scrollRight 1.5s;
+        right: 0;
+      }
+    }
+
+    .section-name {
+      width: 185px;
+      bottom: calc(50% - 22px);
+      right: -71px;
+    }
+
+    img {
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  [data-name="hobby"] {
+    background-color: #CFC5F5;
+    position: relative;
+    z-index: 1;
+
+    .slide-1 {
+      background-color: #CFC5F5;
+
+      &__scrolled {
+        animation: scrollLeft 1.5s;
+        left: -350%;
+      }
+    }
+
+    .slide-2 {
+      background-color: #CFC5F5;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: -100%;
+
+      &__scrolled {
+        animation: scrollRight 1.5s;
+        right: 0;
+      }
+    }
+
+    .section-name {
+      width: 125px;
+      top: 60px;
+      left: calc(50% - 62px);
+      z-index: 2;
+
+      &__scrolled {
+        animation: hobbyScrolled .75s;
+        left: -16px;
+        top: 116px;
+      }
+    }
+
+    .section-img {
+      height: auto;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  [data-name="projects"] {
+    background-color: #48B3FE;
+    position: relative;
+    z-index: 1;
+
+    .slide-1 {
+      background-color: #48B3FE;
+
+      &__scrolled {
+        animation: scrollLeft 1.5s;
+        left: -350%;
+      }
+    }
+
+    .slide-2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: -100%;
+
+      &__scrolled {
+        animation: scrollRight 1.5s;
+        right: 0;
+      }
+    }
+
+    .section-name {
+      width: 210px;
+      top: 127px;
+      right: -68px;
+
+      &__scrolled {
+        animation: projectScrolled 1.5s;
+        z-index: 2;
+        right: calc(100% - 145px);
+        top: calc(50% - 11px);
+      }
+    }
+  }
+
+  [data-name="media"] {
+    background-color: #D000B6;
+    position: relative;
+    z-index: 1;
+
+    .slide-1 {
+      background-color: #D000B6;
+
+      &__scrolled {
+        animation: scrollLeft 1.5s;
+        left: -350%;
+      }
+    }
+
+    .slide-2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: -100%;
+
+      &__scrolled {
+        animation: scrollRight .75s;
+        right: 0;
+      }
+    }
+
+    .section-name {
+      width: 176px;
+      right: -58px;
+      bottom: 138px;
+    }
+
+    .section-img {
+      top: 0;
+      right: -65px;
+    }
+  }
+
+  .text {
+    padding-right: 27px;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 15px;
+  }
+
+  .chosen {
+    animation-name: slideout;
+    animation-duration: .5s;
+  }
+
+  .hidden-1 {
+    animation-name: slidein1;
+    animation-duration: .5s;
+  }
+
+  .hidden-2 {
+    animation-name: slidein2;
+    animation-duration: .5s;
+  }
+
+  .hidden-3 {
+    animation-name: slidein3;
+    animation-duration: .5s;
+  }
+
+  .slide-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    z-index: 1;
+
+    &__scrolled {
+      animation: scrollLeft 1.5s;
+      left: -350%;
+    }
+  }
+}

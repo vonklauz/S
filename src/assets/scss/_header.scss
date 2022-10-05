@@ -1,0 +1,125 @@
+header {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px;
+    padding-right: 16px;
+    padding-bottom: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .logo {
+    &__section {
+      display: flex;
+      align-items: center;
+    }
+
+    &__wrapper {
+      width: 22px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__name {
+      margin-left: 16px;
+      width: 103px;
+      font-size: 12px;
+      line-height: 11px;
+      color: #FFFFFF;
+      font-family: $light;
+    }
+  }
+
+  .hamburger {
+    &__section {
+      display: flex;
+      justify-content: flex-end;
+      width: 31px;
+      transform: rotateZ(90deg);
+      position: absolute;
+      top: 23px;
+      right: 26px;
+      background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000 0, #000 7.37%, #000 100%);
+      z-index: 2;
+      transition: all .5s;
+
+      a {
+        width: 0;
+        opacity: 0;
+        margin-left: 0;
+        visibility: hidden;
+        transition: all .5s;
+      }
+
+      &__opened {
+        transform: rotateZ(0deg);
+        width: calc(100vw - 42px);
+        animation-name: openHamburger;
+        align-items: center;
+        animation-duration: .3s;
+      }
+
+      .showed-link {
+        animation-name: showLink;
+        animation-duration: 1s;
+      }
+
+      &__finally_opened {
+        // animation: openedHamburger .5s;
+        // .hamburger__item {
+        //   margin: 0 10px !important;
+        // }
+
+        a:not(.logo__wrapper__opened) {
+          text-align: center;
+          animation: showLink 1.2s;
+          width: 70px;
+          visibility: visible;
+          opacity: 1;
+          font-size: 14px;
+          line-height: 13px;
+          color: #FFFFFF;
+          font-family: $bold;
+          padding: 0 5px;
+
+          &:first-of-type {
+            text-align: right;
+          }
+
+          &:nth-of-type(4) {
+            text-align: left;
+          }
+
+          // &:last-of-type {
+          //   text-align: right;
+          //   width: 22px;
+          // }
+        }
+
+        .logo__wrapper__opened {
+          width: 22px;
+          visibility: visible;
+          opacity: 1;
+          transition: all .5s;
+        }
+      }
+    }
+
+    &__item {
+      width: 4px;
+      height: 34px;
+      margin-left: 3px;
+      margin-right: 3px;
+      background: #FFFFFF;
+      overflow: hidden;
+
+      // &:first-of-type {
+      //   margin-left: 0;
+      // }
+    }
+  }
+}
