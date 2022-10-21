@@ -33,17 +33,17 @@ $duration: .25s;
 
 @import '_about';
 @import '_animations';
+@import '_sliders';
 
 body {
     background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
     min-height: 100vh;
 
     h1 {
-        margin-bottom: 21px;
-        padding-left: 75px;
+        padding-left: 93px;
         font-size: 17px;
         line-height: 16px;
-        width: 290px;
+        width: 320px;
         color: #fff;
         font-family: $regular;
     }
@@ -55,6 +55,39 @@ a {
 
 main {
     overflow: hidden;
+    position: relative;
+    padding-top: 133px;
+    padding-bottom: 96px;
+
+    &::after,
+    &::before {
+        content: "";
+        width: 100%;
+        height: 55%;
+        position: absolute;
+        left: 0;
+        background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
+        z-index: 2;
+        transition: all .3s;
+    }
+
+    &::after {
+        top: -100%;
+    }
+
+    &::before {
+        bottom: -100%;
+    }
+}
+
+main.page-changing {
+    &::after {
+        top: 0;
+    }
+
+    &::before {
+        bottom: 0;
+    }
 }
 
 ul {
@@ -66,6 +99,13 @@ ul {
 section {
     font-family: $regular;
     color: #fff;
+}
+
+// Это спрятанный блок, использующийся для анимаций, его удаление может их сломать
+#animationsPolygon {
+    position: absolute;
+    top: -1000%;
+    left: -1000%;
 }
 
 .section-title {
@@ -97,19 +137,38 @@ section {
     color: #000000;
 }
 
+.standart-btn {
+
+    svg {
+        transition: all .25s;
+
+        path {
+            transition: all .25s;
+        }
+    }
+
+    &:hover {
+        svg {
+            stroke: #000000;
+
+            path {
+                stroke: #000000;
+            }
+        }
+    }
+}
+
 .widget-row {
     display: flex;
     flex-wrap: wrap;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+    min-width: 0;
+    min-height: 100px;
 
-    .item {
+    .image-wrapper {
         cursor: pointer;
         background-color: #C1C1C1;
         margin-bottom: 13px;
-        padding: 30px 18px;
+        // padding: 30px 18px;
         width: calc(50% - 6.5px);
         font-size: 19px;
         line-height: 18px;
@@ -120,9 +179,22 @@ section {
         &:nth-child(odd) {
             margin-right: 13px;
         }
+
+        img {
+            width: 100%;
+        }
     }
 }
 
 .widget-row::-webkit-scrollbar {
     display: none;
+}
+
+@media (min-width: 996px) {
+    body {
+        h1 {
+            width: auto;
+            margin-left: 73px;
+        }
+    }
 }

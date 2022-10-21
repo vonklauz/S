@@ -20,14 +20,18 @@
   }
 }
 
+.hobby,
+.projects {
+  padding: 40px 50px 40px 70px;
+  position: relative;
+  height: 100%;
+}
+
 .hobby {
   background-color: #CFC5F5;
-  padding: 21px 33px;
-  position: relative;
-  overflow: hidden;
 
   .section-name {
-    left: -16px;
+    left: -30px;
     top: 116px;
   }
 
@@ -36,16 +40,9 @@
     margin-top: 29px;
     margin-bottom: 0;
   }
-
-  .widget-row {
-    margin-top: 35px;
-    margin-left: 39px;
-  }
 }
 
 .projects {
-  position: relative;
-  padding: 21px 33px 27px 80px;
   background-color: #48B3FE;
 
   .section-name {
@@ -53,17 +50,8 @@
     top: calc(50% - 11px);
   }
 
-  // .widget-wrapper {
-  //   position: relative;
-  //   &::after {
-  //     content: "";
-  //     height: 100%;
-  //     width: 100%;
-  //     position: absolute;
-  //     bottom: 0;
-  //     left: 0;
-  //     background: linear-gradient(0deg, rgba(72, 179, 254, 0.7) 0%, rgba(72, 179, 254, 0.3) 50%, transparent 100%);
-  //   }
+  // .swiper-wrapper {
+  //   height: calc(100% - 54px);
   // }
 
   .widget-row {
@@ -99,8 +87,8 @@
       margin-bottom: 17px;
 
       img {
-        width: 110px;
-        height: 110px;
+        width: 150px;
+        height: 150px;
       }
 
       p {
@@ -115,6 +103,8 @@
   .podcast-col {
     display: flex;
     flex-direction: column;
+    transition: all .25s;
+    opacity: 0;
   }
 }
 
@@ -124,7 +114,7 @@
 
 .news {
   .news-wrapper {
-    margin-top: 43px;
+    margin-top: 16px;
     padding: 33px;
     padding-top: 0;
     min-height: 70vh;
@@ -133,6 +123,9 @@
   .news-item {
     color: #fff;
     margin-bottom: 16px;
+    opacity: 0;
+    transition: all .5s;
+    display: block;
 
     .news-title {
       font-family: $bold;
@@ -145,6 +138,14 @@
       img {
         width: 100%;
       }
+    }
+
+    .news-bold {
+      font-family: $bold;
+      font-size: 16px;
+      line-height: 15px;
+      margin-top: 32px;
+      margin-bottom: 16px;
     }
 
     .news-annotation {
@@ -164,6 +165,261 @@
       font-size: 27px;
       line-height: 26px;
       font-family: $bold;
+    }
+  }
+}
+
+.contacts {
+
+  .contacts-wrapper {
+    margin-top: 16px;
+    min-height: 70vh;
+    color: #fff;
+  }
+
+  h3 {
+    font-family: $bold;
+    font-size: 27px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    padding: 0 20px;
+  }
+
+  .img-wrapper {
+    margin-bottom: 48px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin-bottom: 8px;
+    padding: 0 20px;
+  }
+
+  p,
+  a {
+    font-size: 16px;
+    line-height: 15px;
+    font-family: $light;
+  }
+
+  a {
+    display: inline-block;
+    margin-left: 6px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.podcast-single {
+  button {
+    background: none;
+    border: none;
+  }
+
+  .change-podcast {
+    padding: 0 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      width: 19px;
+    }
+  }
+
+  .content {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 73px;
+
+    .title {
+      font-size: 14px;
+      line-height: 13px;
+      font-family: $light;
+      margin-bottom: 16px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .podcast-banner {
+      text-align: center;
+      background-color: #CFC5F5;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+
+    button {
+      &:nth-of-type(1) {
+        img {
+          margin-right: 7px;
+        }
+      }
+
+      &:last-of-type {
+        img {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+
+  .media-progress {
+    margin-top: 45px;
+    width: 100%;
+
+    .bar {
+      width: 100%;
+      position: relative;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.3);
+
+      .line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 37%;
+        height: 100%;
+        background-color: #fff;
+
+        .dot {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          &::after {
+            opacity: 0;
+            content: "";
+            height: 16px;
+            width: 16px;
+            position: absolute;
+            background: #fff;
+            border-radius: 100%;
+            right: -8px;
+            top: -4px;
+            transition: all .25s;
+          }
+
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .text-bottom {
+    margin-top: 37px;
+    font-size: 16px;
+    line-height: 15px;
+    font-family: $light;
+    padding-left: 33px;
+    padding-right: 27px;
+  }
+}
+
+.single-page {
+  height: 68vh;
+  min-height: 420px;
+  position: relative;
+  color: #000;
+  font-family: $light;
+
+  &-wrapper {
+    padding: 22px 35px 41px 32px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .projects-page {
+    background-color: #48B3FE;
+  }
+
+  .hobby-page {
+    background-color: #CFC5F5;
+  }
+
+  .arrow-btn {
+    position: absolute;
+    top: 22px;
+    right: 35px;
+    z-index: 3;
+  }
+
+  .poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: all .5s;
+  }
+
+  .title {
+    font-size: 19px;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 13px;
+  }
+
+  .text-wrapper {
+    margin-top: 36px;
+    height: 80%;
+    overflow: hidden;
+
+    .swiper {
+      height: 100%;
+
+      .swiper-wrapper {
+        height: 100%;
+
+        .swiper-slide {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .text {
+      font-size: 19px;
+      line-height: 18px;
+      margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 996px) {
+  .news-wrapper {
+    display: flex;
+    padding: 0  200px !important;
+    .news-item {
+      margin-right: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
     }
   }
 }

@@ -1,8 +1,15 @@
 footer {
-  margin-top: 31px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  padding-top: 31px;
   padding-left: 33px;
   padding-right: 31px;
   padding-bottom: 16px;
+  background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
+
 
   img {
     margin-right: 23px;
@@ -13,6 +20,25 @@ footer {
     line-height: 11px;
     color: #fff;
     font-family: $regular;
-    
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 996px) {
+  footer {
+    padding: 31px 200px;
+
+    .d-flex {
+      align-items: center;
+    }
+
+    img {
+      width: 33px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 16px;
+    }
   }
 }

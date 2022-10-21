@@ -10,6 +10,18 @@
 
 }
 
+@keyframes slideoutFull {
+
+  from {
+    width: 12%;
+  }
+
+  to {
+    width: 100vw;
+  }
+
+}
+
 @keyframes slidein1 {
 
   from {
@@ -53,6 +65,7 @@
   }
 
   50% {
+    right: 20px;
     transform: rotateZ(0deg);
     width: 31px;
   }
@@ -83,7 +96,7 @@
   }
 
   50% {
-    width: 70px;
+    // width: 70px;
     // padding: 0 5px;
     visibility: visible;
   }
@@ -109,7 +122,7 @@
 
 @keyframes scrollRight {
   from {
-    right: -200%;
+    right: -150%;
   }
 
   to {
@@ -119,12 +132,7 @@
 
 @keyframes hobbyScrolled {
   from {
-    top: 60px;
     left: calc(50% - 62px);
-  }
-
-  50% {
-    left: -16px;
   }
 
   to {
@@ -134,16 +142,10 @@
 
 @keyframes projectScrolled {
   from {
-    top: 127px;
     right: -68px;
   }
 
-  50% {
-    right: calc(100% - 145px);
-    // left: -68px;
-  }
-
   to {
-    top: calc(50% - 11px);
+    right: calc(100% - 140px);
   }
 }

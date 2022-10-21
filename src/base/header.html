@@ -1,22 +1,42 @@
 <header>
-  <div class="header-container">
+  <div class="header-container mobile">
     <div class="logo__section">
       <a class="logo__wrapper" href="/">
-        <img src="/assets/img/logo.svg" alt="Logo">
+        <img src="/assets/img/logo.png" alt="Logo">
       </a>
       <div class="logo__name">Sergey Grebennikov</div>
     </div>
-    <div class="hamburger__section">
-      <a href="about.html" class="menu-link">news</a>
+    <div class="hamburger__section" id="hamburgerSection">
       <div class="hamburger__item"></div>
-      <a href="#" class="menu-link">contacts</a>
+      <a href="about.html" class="menu-link active">news</a>
       <div class="hamburger__item"></div>
-      <a href="#" class="menu-link">calendar</a>
+      <a href="contacts.html" class="menu-link">contacts</a>
       <div class="hamburger__item"></div>
-      <a href="#" class="menu-link">blog</a>
+      <a href="about.html" class="menu-link">calendar</a>
       <a class="logo__wrapper__opened" href="/">
-        <img src="/assets/img/logo.svg" alt="Logo">
+        <img src="/assets/img/logo.png" alt="Logo">
       </a>
     </div>
   </div>
+  <div class="header-container desktop">
+    <div class="logo__section">
+      <a class="logo__wrapper" href="/">
+        <img src="/assets/img/logo.png" alt="Logo">
+      </a>
+      <div class="logo__name">Sergey Grebennikov</div>
+    </div>
+    <div class="desktop-links">
+      <a href="about.html" class="menu-link" style="width: 36px;">news</a>
+      <div class="hamburger__item"></div>
+      <a href="contacts.html" class="menu-link" style="width: 59px;">contacts</a>
+      <div class="hamburger__item"></div>
+      <a href="about.html" class="menu-link" style="width: 60px;">calendar</a>
+    </div>
+  </div>
+  <h1>
+    Your well-being depends
+    on your own decisions
+  </h1>
 </header>
+
+<div id="animationsPolygon"></div>
