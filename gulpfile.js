@@ -25,49 +25,52 @@ const gulp = require('gulp'),
   assets = '/assets',
   source_folder = 'src',
   path = {
-      build: {
-          html: project_folder + '/',
-          css: project_folder + assets + '/css/',
-          img: project_folder + assets + '/img/',
-          js: project_folder + assets + '/js/',
-          fonts: project_folder + assets + '/fonts/',
-      },
-      src: {
-          html: source_folder + '/',
-          css: source_folder + assets + '/scss/index.scss',
-          bootstrap: source_folder + assets + '/scss/*.css',
-          img: source_folder + assets + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-          js: source_folder + assets + '/js/*.js',
-          otherScripts: source_folder + assets + '/js/otherScripts/*.js',
-          fonts: source_folder + assets + '/fonts/*.{ttf,eot,woff}',
-      },
-      watch: {
-          html: source_folder + '/**/*.html',
-          css: source_folder + assets + '/scss/**/*.scss',
-          img: source_folder + assets + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-          js: source_folder + assets + '/js/**/*.js',
-      },
-      clear: './' + project_folder + '/'
+    build: {
+      html: project_folder + '/',
+      css: project_folder + assets + '/css/',
+      img: project_folder + assets + '/img/',
+      music: project_folder + assets + '/mp3/**/*.{mp3}',
+      js: project_folder + assets + '/js/',
+      fonts: project_folder + assets + '/fonts/',
+    },
+    src: {
+      html: source_folder + '/',
+      css: source_folder + assets + '/scss/index.scss',
+      bootstrap: source_folder + assets + '/scss/*.css',
+      img: source_folder + assets + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+      music: source_folder + assets + '/mp3/**/*.{mp3}',
+      js: source_folder + assets + '/js/*.js',
+      otherScripts: source_folder + assets + '/js/otherScripts/*.js',
+      fonts: source_folder + assets + '/fonts/*.{ttf,eot,woff}',
+    },
+    watch: {
+      html: source_folder + '/**/*.html',
+      css: source_folder + assets + '/scss/**/*.scss',
+      img: source_folder + assets + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+      music: source_folder + assets + '/mp3/**/*.{mp3}',
+      js: source_folder + assets + '/js/**/*.js',
+    },
+    clear: './' + project_folder + '/'
   }
 
 function browserSync(params) {
   sync.init({
-      server: {
-          baseDir: path.clear
-      },
-      port: 1888,
-      notify: false
+    server: {
+      baseDir: path.clear
+    },
+    port: 1888,
+    notify: false
   })
 }
 
 function html() {
   return src(path.src.html + '*.html')
-      .pipe(include({
-          prefix: '@@'
-      }))
-      .pipe(webpHTML())
-      .pipe(dest(path.build.html))
-      .pipe(sync.stream())
+    .pipe(include({
+      prefix: '@@'
+    }))
+    .pipe(webpHTML())
+    .pipe(dest(path.build.html))
+    .pipe(sync.stream())
 }
 
 function watchFiles() {
@@ -75,6 +78,7 @@ function watchFiles() {
   gulp.watch([path.watch.css], css)
   gulp.watch([path.watch.js], js)
   gulp.watch([path.watch.img], images)
+  gulp.watch([path.watch.music], images)
 }
 
 function clear() {
@@ -83,67 +87,75 @@ function clear() {
 
 function css() {
   return src(path.src.css)
-      .pipe(sourcemaps.init())
-      .pipe(sass({
-          outputStyle: 'expanded'
-      }))
-      .pipe(group_media())
-      //.pipe(webpCss())
-      .pipe(autoprefixer({
-          overrideBrowserslist: ['last 5 versions'],
-          cascade: true
-      }))
-      .pipe(clean_css())
-      .pipe(sourcemaps.write())
-      .pipe(dest(path.build.css))
-      .pipe(src(path.src.bootstrap))
-      .pipe(dest(path.build.css))
-      .pipe(sync.stream())
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }))
+    .pipe(group_media())
+    //.pipe(webpCss())
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 5 versions'],
+      cascade: true
+    }))
+    .pipe(clean_css())
+    .pipe(sourcemaps.write())
+    .pipe(dest(path.build.css))
+    .pipe(src(path.src.bootstrap))
+    .pipe(dest(path.build.css))
+    .pipe(sync.stream())
 }
 
 function js() {
   return src(path.src.js)
-      .pipe(sourcemaps.init())
-      .pipe(include())
-      .pipe(babel())
-      .pipe(uglify())
-      .pipe(sourcemaps.write())
-      .pipe(dest(path.build.js))
-      .pipe(src(path.src.otherScripts))
-      .pipe(dest(path.build.js))
-      .pipe(sync.stream())
+    .pipe(sourcemaps.init())
+    .pipe(include())
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(dest(path.build.js))
+    .pipe(src(path.src.otherScripts))
+    .pipe(dest(path.build.js))
+    .pipe(sync.stream())
 }
 
 function images() {
   return src(path.src.img)
-      .pipe(webp({
-          quality: 70
-      }))
-      .pipe(dest(path.build.img))
-      .pipe(src(path.src.img))
-      .pipe(imagemin({
-          progressive: true,
-          svgoPlugins: [{
-              removeViewBox: false
-          }],
-          interlaced: true,
-          optimizationLevel: 3
-      }))
-      .pipe(dest(path.build.img))
-      .pipe(sync.stream())
+    .pipe(webp({
+      quality: 70
+    }))
+    .pipe(dest(path.build.img))
+    .pipe(src(path.src.img))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{
+        removeViewBox: false
+      }],
+      interlaced: true,
+      optimizationLevel: 3
+    }))
+    .pipe(dest(path.build.img))
+    .pipe(sync.stream())
 }
 
 function fonts() {
   return src(path.src.fonts)
-      //.pipe(fonter())
-      .pipe(dest(path.build.fonts))
-      .pipe(sync.stream())
+    //.pipe(fonter())
+    .pipe(dest(path.build.fonts))
+    .pipe(sync.stream())
 }
 
-const build = gulp.series(clear, gulp.parallel(js, css, html, images, fonts)),
+function music() {
+  return src(path.src.music)
+    //.pipe(fonter())
+    .pipe(dest(path.build.music))
+    .pipe(sync.stream())
+}
+
+const build = gulp.series(clear, gulp.parallel(js, css, html, images, fonts, music)),
   watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;
+exports.fonts = music;
 exports.images = images;
 exports.js = js;
 exports.css = css;

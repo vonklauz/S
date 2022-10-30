@@ -1,6 +1,7 @@
 .about {
   background-color: #FCA929;
   padding: 72px 42px 54px 52px;
+  height: 100%;
 
   p {
     color: #000;
@@ -28,11 +29,13 @@
 }
 
 .hobby {
-  background-color: #CFC5F5;
+  background-color: #bdaee7;
+  position: relative;
 
   .section-name {
-    left: -30px;
-    top: 116px;
+    left: -30px !important;
+    top: 116px !important;
+    width: 125px !important;
   }
 
   .section-text {
@@ -46,8 +49,13 @@
   background-color: #48B3FE;
 
   .section-name {
-    left: -33px;
-    top: calc(50% - 11px);
+    top: calc(50% - 11px) !important;
+    width: 210px;
+
+    &__scrolled_no-animation {
+      z-index: 2;
+      right: calc(100% - 140px) !important;
+    }
   }
 
   // .swiper-wrapper {
@@ -64,6 +72,7 @@
 .media {
   padding: 22px 36px 36px 36px;
   background-color: #D000B6;
+  height: 100%;
 
   h3,
   h6,
@@ -73,14 +82,12 @@
   }
 
   .podcast-row {
-    margin-top: 60px;
-    display: flex;
-    overflow-y: visible;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    #mediaSlider {
+      height: 100%;
+    }
 
     .item {
       margin-right: 23px;
@@ -104,7 +111,12 @@
     display: flex;
     flex-direction: column;
     transition: all .25s;
-    opacity: 0;
+
+    .item {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -114,15 +126,36 @@
 
 .news {
   .news-wrapper {
-    margin-top: 16px;
-    padding: 33px;
-    padding-top: 0;
-    min-height: 70vh;
+    position: relative;
+    padding: 115px 0 100px 0;
+    height: 100vh;
+    overflow: visible;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff !important;
+      transform: rotateZ(90deg);
+
+      &::after {
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+
+    .swiper-button-next {
+      bottom: 60px;
+      left: calc(50% - 13px);
+      top: unset;
+    }
+
+    .swiper-button-prev {
+      top: 95px;
+      left: calc(50% - 13px);
+    }
   }
 
   .news-item {
     color: #fff;
-    margin-bottom: 16px;
     opacity: 0;
     transition: all .5s;
     display: block;
@@ -143,7 +176,7 @@
     .news-bold {
       font-family: $bold;
       font-size: 16px;
-      line-height: 15px;
+      line-height: 18px;
       margin-top: 32px;
       margin-bottom: 16px;
     }
@@ -151,7 +184,7 @@
     .news-annotation {
       font-family: $regular;
       font-size: 16px;
-      line-height: 15px;
+      line-height: 18px;
       margin-top: 13px;
       margin-bottom: 5px;
     }
@@ -214,6 +247,11 @@
 }
 
 .podcast-single {
+
+  .controls-component {
+    margin-top: 32px;
+  }
+
   button {
     background: none;
     border: none;
@@ -235,9 +273,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0 73px;
 
     .title {
+      text-align: center;
       font-size: 14px;
       line-height: 13px;
       font-family: $light;
@@ -248,77 +288,10 @@
 
     .podcast-banner {
       text-align: center;
-      background-color: #CFC5F5;
+      background-color: #bdaee7;
 
       img {
         max-width: 100%;
-      }
-    }
-  }
-
-  .controls {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 33px;
-
-    button {
-      &:nth-of-type(1) {
-        img {
-          margin-right: 7px;
-        }
-      }
-
-      &:last-of-type {
-        img {
-          margin-left: 7px;
-        }
-      }
-    }
-  }
-
-  .media-progress {
-    margin-top: 45px;
-    width: 100%;
-
-    .bar {
-      width: 100%;
-      position: relative;
-      height: 7px;
-      background: rgba(255, 255, 255, 0.3);
-
-      .line {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 37%;
-        height: 100%;
-        background-color: #fff;
-
-        .dot {
-          position: relative;
-          width: 100%;
-          height: 100%;
-
-          &::after {
-            opacity: 0;
-            content: "";
-            height: 16px;
-            width: 16px;
-            position: absolute;
-            background: #fff;
-            border-radius: 100%;
-            right: -8px;
-            top: -4px;
-            transition: all .25s;
-          }
-
-          &:hover {
-            &::after {
-              opacity: 1;
-            }
-          }
-        }
       }
     }
   }
@@ -334,14 +307,12 @@
 }
 
 .single-page {
-  height: 68vh;
-  min-height: 420px;
-  position: relative;
   color: #000;
   font-family: $light;
+  margin-bottom: 80px;
 
   &-wrapper {
-    padding: 22px 35px 41px 32px;
+    padding: 22px 35px 80px 32px;
     height: 100%;
     width: 100%;
   }
@@ -351,7 +322,7 @@
   }
 
   .hobby-page {
-    background-color: #CFC5F5;
+    background-color: #bdaee7;
   }
 
   .arrow-btn {
@@ -362,19 +333,20 @@
   }
 
   .poster {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
     z-index: 2;
-    transition: all .5s;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   .title {
-    font-size: 19px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 19px;
     margin-bottom: 5px;
+    font-family: $bold;
   }
 
   .subtitle {
@@ -387,31 +359,186 @@
     height: 80%;
     overflow: hidden;
 
-    .swiper {
-      height: 100%;
-
-      .swiper-wrapper {
-        height: 100%;
-
-        .swiper-slide {
-          height: auto;
-        }
-      }
-    }
-  }
-
-  .text {
+    p {
       font-size: 19px;
       line-height: 18px;
       margin-bottom: 12px;
+    }
+
+    // .swiper {
+    //   height: 100%;
+
+    //   .swiper-wrapper {
+    //     height: 100%;
+
+    //     .swiper-slide {
+    //       height: auto;
+    //     }
+    //   }
+    // }
   }
 }
 
+.single-page.desktop {
+  display: none;
+}
+
+.news-item-desktop {
+  display: none;
+}
+
+.podcast-single-desktop {
+  display: none;
+}
+
 @media (min-width: 996px) {
+  .single-page.mobile {
+    display: none;
+  }
+
+  .single-page.desktop {
+    display: block;
+    height: 60vh;
+    margin-top: 20px;
+
+    .title {
+      margin-top: 36px;
+      font-size: 29px;
+      line-height: 28px;
+      font-family: $regular;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      line-height: 17px;
+      font-family: $light;
+    }
+
+    .wrapper {
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      padding: 20px;
+      height: 100%;
+      padding: 0;
+    }
+
+    .content-left {
+      width: 20%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+
+      .slide-name {
+        position: absolute;
+        font-size: 25px;
+        line-height: 24px;
+        font-family: $bold;
+        color: #000;
+        width: 125px;
+        z-index: 1;
+      }
+
+      .slide-image {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .content-right {}
+  }
+
+  .single-page.desktop.hobby-page {
+    .content-left {
+      display: flex;
+      justify-content: flex-end;
+      max-width: 240px;
+
+      .slide-name {
+        top: calc(50% - 100px);
+        left: calc(50% - 62.5px);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content-right {
+      padding-left: 0px;
+      width: 65%;
+      background-color: #bdaee7;
+      z-index: 2;
+    }
+  }
+
+  .projects-page {
+    background-color: #48B3FE;
+
+    .slide-name {
+      top: calc(55px + 25%);
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  .hobby-page {
+    background-color: #bdaee7;
+
+    .slide-name {
+      top: 173px;
+      transform: rotateZ(-90deg) translate(50%);
+      left: 25px;
+    }
+  }
+
+  .podcast-single.podcast-single-mobile {
+    display: none;
+  }
+
+  .podcast-single-desktop {
+    display: block;
+  }
+
+  .controls-component {
+    margin-top: 16px;
+  }
+
+  .news-item-mobile {
+    display: none !important;
+  }
+
+  .news-item-desktop {
+    display: block;
+  }
+
   .news-wrapper {
+    position: relative;
     display: flex;
-    padding: 0  200px !important;
+    align-items: center;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      transform: rotateZ(0deg) !important;
+      top: unset !important;
+      bottom: unset !important;
+
+      &::after {
+        font-size: 30px !important;
+      }
+    }
+
+    .swiper-button-next {
+      right: -30px !important;
+      left: unset !important;
+    }
+
+    .swiper-button-prev {
+      left: -30px !important;
+    }
+
     .news-item {
+      height: fit-content;
       margin-right: 16px;
       display: flex;
       flex-direction: column;
@@ -419,6 +546,89 @@
 
       &:nth-child(3n + 3) {
         margin-right: 0;
+      }
+    }
+  }
+
+  .single-news {
+    min-height: unset !important;
+    height: 0 !important;
+    display: none;
+  }
+
+  .black-single {
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 4px;
+    height: 64vh;
+    overflow: scroll;
+
+    .title {
+      font-size: 40px;
+      line-height: 38px;
+      font-family: $bold;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      display: flex;
+      height: 100%;
+      padding-top: 16px;
+
+      .left {
+        width: 75%;
+        margin-right: 32px;
+
+        .top {
+          display: flex;
+
+          .image {
+            width: 40%;
+            margin-right: 24px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .text {
+            width: 60%;
+
+            p {
+              font-size: 14px;
+              line-height: 16px;
+              font-family: $light;
+            }
+          }
+
+          .news-text {
+            p {
+              &:first-of-type {
+                font-family: $bold;
+              }
+            }
+          }
+
+          .media-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+
+        .bottom {
+          margin-top: 20px;
+
+          p {
+            font-size: 14px;
+            line-height: 16px;
+            font-family: $light;
+          }
+        }
+      }
+
+      .right {
+        width: calc(30% - 32px);
       }
     }
   }

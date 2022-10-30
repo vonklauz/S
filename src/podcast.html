@@ -8,7 +8,12 @@
     on your own decisions
   </h1>
   <main>
-    <section class="podcast-single">
+    <!-- В этот блок добавлять ссылку на подкаст -->
+    <div id="audio">
+      <audio controls src="/assets/mp3/test.mp3"></audio>
+    </div>
+
+    <section class="podcast-single podcast-single-mobile">
       <div class="change-podcast">
         <a href=""><img src="/assets/img/left-white.svg" alt="Previous"></a>
         <a href=""><img src="/assets/img/right-white.svg" alt="Next"></a>
@@ -18,19 +23,26 @@
         <div class="podcast-banner">
           <img src="/assets/img/media/banner.png" alt="Podcast name">
         </div>
-        <div class="controls">
-          <button>
-            <img src="/assets/img/play-left.svg" alt=""><img src="/assets/img/stick.svg" alt="">
-          </button>
-          <button><img src="/assets/img/play.svg" alt=""></button>
-          <button>
-            <img src="/assets/img/stick.svg" alt=""><img src="/assets/img/play.svg" alt="">
-          </button>
-        </div>
-        <div class="media-progress">
-          <div class="bar">
-            <div class="line">
-              <div class="dot"></div>
+        <div class="controls-component">
+          <div class="controls">
+            <button data-action="back">
+              <img src="/assets/img/play-left.svg" alt=""><img src="/assets/img/stick.svg" alt="">
+            </button>
+            <button data-action="play" class="showed-control"><img src="/assets/img/play.svg" alt=""></button>
+            <button data-action="stop" class="hidden-control">
+              <img src="/assets/img/stick.svg" alt="">
+              <img src="/assets/img/stick.svg" alt="">
+            </button>
+            <button data-action="forward">
+              <img src="/assets/img/stick.svg" alt=""><img src="/assets/img/play.svg" alt="">
+            </button>
+          </div>
+          <div class="media-progress">
+            <div class="time"></div>
+            <div class="bar">
+              <div class="line">
+                <div class="dot"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -41,7 +53,103 @@
         doloremque architecto.
       </p>
     </section>
+    <section class="podcast-single-desktop">
+      <div class="black-single container">
+        <div class="content">
+          <div class="left">
+            <h3 class="title">News title #1</h3>
+            <div class="top">
+              <div class="image">
+                <img src="/assets/img/media/podcast-big.png" alt="">
+              </div>
+              <div class="text media-text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem ratione architecto velit, asperiores
+                  ullam quasi repudiandae excepturi cumque totam, pariatur delectus consequuntur voluptates rem amet
+                  maiores nihil minus? Quod, est! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ipsam
+                  quam rerum deserunt? Quas officia, qui nam rerum explicabo, atque rem tempora facilis pariatur quidem
+                  nobis. Exercitationem laborum dolorum fugit.</p>
+                <div class="controls-component">
+                  <div class="controls">
+                    <button data-action="back">
+                      <img src="/assets/img/play-left.svg" alt=""><img src="/assets/img/stick.svg" alt="">
+                    </button>
+                    <button data-action="play" class="showed-control"><img src="/assets/img/play.svg" alt=""></button>
+                    <button data-action="stop" class="hidden-control">
+                      <img src="/assets/img/stick.svg" alt="">
+                      <img src="/assets/img/stick.svg" alt="">
+                    </button>
+                    <button data-action="forward">
+                      <img src="/assets/img/stick.svg" alt=""><img src="/assets/img/play.svg" alt="">
+                    </button>
+                  </div>
+                  <div class="media-progress">
+                    <div class="time"></div>
+                    <div class="bar">
+                      <div class="line">
+                        <div class="dot"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="black-single-slider">
+              <div class="swiper-button-next black-slider-next"></div>
+              <div class="swiper-button-prev black-slider-prev"></div>
+              <div class="swiper black-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slide">
+                      <a href="">
+                        <p class="title">News title #1</p>
+                        <div class="image">
+                          <img src="/assets/img/news/news-slider.png" alt="">
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide">
+                      <a href="">
+                        <p class="title">News title #2</p>
+                        <div class="image">
+                          <img src="/assets/img/news/news-slider.png" alt="">
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide">
+                      <a href="">
+                        <p class="title">News title #3</p>
+                        <div class="image">
+                          <img src="/assets/img/news/news-slider.png" alt="">
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   @@include('base/footer.html')
   @@include('base/scripts.html')
 </body>
+
+
+
+<!--
+  right -174
+  width 409
+  slide width 113
+  slide height 454
+
+  calc(-174px / ((100vw / 4) / 100))
+
+-->

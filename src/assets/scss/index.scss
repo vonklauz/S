@@ -1,4 +1,4 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import '_fonts';
 
 //Цвета
@@ -33,20 +33,33 @@ $duration: .25s;
 
 @import '_about';
 @import '_animations';
+@import '_media_control';
 @import '_sliders';
+@import '_calendar';
 
 body {
     background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
     min-height: 100vh;
 
     h1 {
-        padding-left: 93px;
+        padding-top: 92px;
+        padding-left: 93px !important;
         font-size: 17px;
         line-height: 16px;
         width: 320px;
         color: #fff;
         font-family: $regular;
+        margin-bottom: 18px;
     }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body *::-webkit-scrollbar {
+    display: none;
 }
 
 a {
@@ -56,8 +69,6 @@ a {
 main {
     overflow: hidden;
     position: relative;
-    padding-top: 133px;
-    padding-bottom: 96px;
 
     &::after,
     &::before {
@@ -107,6 +118,7 @@ section {
     top: -1000%;
     left: -1000%;
 }
+
 
 .section-title {
     font-size: 19px;
@@ -192,9 +204,19 @@ section {
 
 @media (min-width: 996px) {
     body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
         h1 {
+            padding-top: 0;
             width: auto;
-            margin-left: 73px;
+            margin: 10px auto 0 auto;
+            padding-left: 98px !important;
         }
+    }
+
+    .index-main {
+        padding-bottom: 0;
     }
 }

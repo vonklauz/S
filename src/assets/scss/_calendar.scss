@@ -1,0 +1,76 @@
+.calendar-wrapper {
+  background-color: #282828;
+}
+
+.calendar-item {
+  position: relative;
+  color: #fff !important;
+  display: block;
+  background-color: #282828;
+  margin-bottom: 25px;
+
+  .date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #282828;
+    font-family: $bold;
+    text-align: center;
+    padding: 12px;
+
+    p {
+      &:first-of-type {
+        font-size: 13px;
+        line-height: 12px;
+        margin-bottom: 5px;
+      }
+
+      &:last-of-type {
+        font-size: 38px;
+        line-height: 36px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .image {
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .text {
+    p {
+      &:first-of-type {
+        font-family: $bold;
+        margin-bottom: 5px;
+        font-size: 23px;
+        line-height: 22px;
+      }
+
+      &:last-of-type {
+        font-family: $regular;
+        margin-bottom: 0;
+        font-size: 17px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    margin-top: 16px;
+    color: #000;
+    background-color: #FCA929;
+    width: 100%;
+    font-family: $regular;
+    font-size: 18px;
+    line-height: 17px;
+    padding: 10px;
+  }
+}

@@ -1,11 +1,15 @@
 <section class="primary">
   <div class="section-slider">
-    <div class="section" data-name="about" data-order="1">
-      <div class="slide-1">
-        <img class="section-img" src="/assets/img/primary/about2.png" alt="">
-        <p class="section-name">about me</p>
-      </div>
-      <!-- <div class="slide-2">
+    <div class="swiper" id="primarySlider">
+      <div class="swiper-wrapper primary-slider-wrapper">
+        <div class="swiper-slide primary-slider-slide">
+          <!-- Обо мне -->
+          <div class="section" data-name="about" data-order="1" data-inner="0">
+            <div class="slide-1">
+              <img class="section-img" src="/assets/img/primary/about2.png" alt="">
+              <p class="section-name">about me</p>
+            </div>
+            <!-- <div class="slide-2">
         <iframe width="100%" height="75vh" src="https://www.youtube.com/embed/Y_-DgHVEuAc"
           title="Touched him without his permission" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -16,229 +20,820 @@
           </button>
         </div>
       </div> -->
-      <div class="slide-3">
-        <!-- <img src="/assets/img/primary/about2.png" alt="">
-        <p class="section-name">about me</p> -->
-        <div class="about">
-          <p class="date">2008</p>
-          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo recusandae ratione, soluta
-            illum
-            est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam odit magni illo
-            veniam quod
-            maiores!</p>
-          <p class="date">2009</p>
-          <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, earum? Excepturi maxime,
-            dolore
-            voluptas, inventore doloribus ipsa incidunt laborum vero sint, aliquam reiciendis. Debitis error quos
-            officia dolor
-            veniam recusandae.</p>
-        </div>
-      </div>
-    </div>
-    <div class="section" data-name="hobby" data-order="2">
-      <div class="slide-1">
-        <img class="section-img" src="/assets/img/primary/hobby2.png" alt="">
-      </div>
-
-      <div class="slide-2">
-        <div class="hobby">
-          <div class="mobile-vertical-slider">
-            <div class="swiper-wrapper">
-              <!-- Slider main container -->
-              <div class="hobby-slider">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <p class="section-title">
-                        Title about hobby
-                      </p>
-                      <p class="section-subtitle">
-                        Subtitle
-                      </p>
-                      <div class="image-wrapper">
-                        <p class="image-wrapper__text">Text</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <p class="section-title">
-                        Title about hobby
-                      </p>
-                      <p class="section-subtitle">
-                        Subtitle
-                      </p>
-                      <div class="image-wrapper">
-                        <p class="image-wrapper__text">Text</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <p class="section-title">
-                        Title about hobby
-                      </p>
-                      <p class="section-subtitle">
-                        Subtitle
-                      </p>
-                      <div class="image-wrapper">
-                        <p class="image-wrapper__text">Text</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="slide-3">
             </div>
-            <div class="swiper-button-next hobby-next"></div>
-            <div class="swiper-button-prev hobby-prev"></div>
+          </div>
+        </div>
+        <div class="swiper-slide primary-slider-slide">
+          <!-- Хобби -->
+          <div class="section" data-name="hobby" data-order="2" data-inner="1">
+            <p class="section-name" data-position-hobby="outer" data-parent="hobby">hobby</p>
+            <div class="slide-1">
+              <img class="section-img" src="/assets/img/primary/hobby2.png" alt="">
+            </div>
+            <div class="slide-2">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide primary-slider-slide">
+          <!-- Проекты -->
+          <div class="section" data-name="projects" data-order="3" data-inner="2">
+            <p class="section-name" data-position-projects="outer" data-parent="projects">projects</p>
+            <img class="section-img" src="/assets/img/primary/projects2.png" alt="">
+            <div class="slide-2">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide primary-slider-slide">
+          <!-- Медиа -->
+          <div class="section" data-name="media" data-order="4" data-inner="3">
+            <div class="slide-1">
+              <img class="section-img" src="/assets/img/primary/newmedia-mobile.png" alt="">
+              <p class="section-name">media</p>
+            </div>
+            <div class="slide-2">
+            </div>
           </div>
         </div>
       </div>
-      <p class="section-name">hobby</p>
     </div>
+  </div>
+  <div class="section-slider-desktop">
+    <div class="section-desktop" data-name="about" data-order="0">
+      <div class="section-desktop__content_wrapper">
+        <div class="section-desktop__content">
+          <div class="section-name">about me</div>
+          <div class="section-img">
+            <img src="/assets/img/primary/about2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-desktop" data-name="hobby" data-order="1">
+      <div class="section-desktop__content_wrapper">
+        <div class="section-desktop__content">
+          <div class="section-name">hobby</div>
+          <div class="section-img">
+            <img src="/assets/img/primary/hobby2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-desktop" data-name="projects" data-order="2">
+      <div class="section-desktop__content_wrapper">
+        <div class="section-desktop__content">
+          <div class="section-name">projects</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-desktop" data-name="media" data-order="3">
+      <div class="section-desktop__content_wrapper">
+        <div class="section-desktop__content">
+          <div class="section-name">media</div>
+          <div class="section-img">
+            <img src="/assets/img/primary/media2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="section" data-name="projects" data-order="3">
-      <img class="section-img" src="/assets/img/primary/projects2.png" alt="">
-      <p class="section-name">projects</p>
-      <div class="slide-2">
-        <div class="projects">
-          <div class="mobile-vertical-slider">
-            <div class="swiper-wrapper">
-              <!-- Slider main container -->
-              <div class="swiper projects-slider">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <a href="single.html" class="d-flex flex-column">
-                        <p class="section-title">
-                          Title about projects
-                        </p>
-                        <p class="section-subtitle">
-                          Subtitle
-                        </p>
-                        <div class="image-wrapper">
-                          <p class="image-wrapper__text">Text</p>
+  <!-- Внутренний слайдер для главной для десктопа -->
+  <div class="swiper primary-swiper-desktop" id="primarySwiperDesktop">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="section-desktop about-slide">
+          <div class="inactive-content">
+            <div class="left">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+              </div>
+              <div class="slide-name">about me</div>
+            </div>
+            <div class="right">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+              </div>
+              <div class="slide-name">about me</div>
+            </div>
+          </div>
+          <div class="active-content">
+            <div class="slide-left">
+              <div class="relative">
+                <div class="slide-name">
+                  about me
+                </div>
+                <div class="slide-image">
+                  <img src="/assets/img/primary/about2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="slide-right container">
+              <div class="text-wrap">
+                <div class="vertical-text-slider">
+                  <div class="swiper-button-next vertical-text-next"></div>
+                  <div class="swiper-button-prev vertical-text-prev"></div>
+                  <div class="swiper" id="desktopVerticalTextSlider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="vertical-text-slider__slide">
+                          <div class="text-block">
+                            <p class="date">2008</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                              recusandae
+                              ratione,
+                              soluta
+                              illum
+                              est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam
+                              odit
+                              magni
+                              illo
+                              veniam quod
+                              maiores!</p>
+                          </div>
+                          <div class="text-block">
+                            <p class="date">2009</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                              recusandae
+                              ratione,
+                              soluta
+                              illum
+                              est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam
+                              odit
+                              magni
+                              illo
+                              veniam quod
+                              maiores!</p>
+                          </div>
+                          <div class="text-block">
+                            <p class="date">2010</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                              recusandae
+                              ratione,
+                              soluta
+                              illum
+                              est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam
+                              odit
+                              magni
+                              illo
+                              veniam quod
+                              maiores!</p>
+                          </div>
+                          <div class="text-block">
+                            <p class="date">2011</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                              recusandae
+                              ratione,
+                              soluta
+                              illum
+                              est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam
+                              odit
+                              magni
+                              illo
+                              veniam quod
+                              maiores!</p>
+                          </div>
+                          <div class="text-block">
+                            <p class="date">2012</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                              recusandae
+                              ratione,
+                              soluta
+                              illum
+                              est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam
+                              odit
+                              magni
+                              illo
+                              veniam quod
+                              maiores!</p>
+                          </div>
+                          <div class="text-block">
+                            <p class="date">2013</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                              recusandae
+                              ratione,
+                              soluta
+                              illum
+                              est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam
+                              odit
+                              magni
+                              illo
+                              veniam quod
+                              maiores!</p>
+                          </div>
+                          <div class="text-block">
+                            <p class="date">2014</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                              recusandae
+                              ratione,
+                              soluta
+                              illum
+                              est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam
+                              odit
+                              magni
+                              illo
+                              veniam quod
+                              maiores!</p>
+                          </div>
                         </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <p class="section-title">
-                        Title about projects
-                      </p>
-                      <p class="section-subtitle">
-                        Subtitle
-                      </p>
-                      <div class="image-wrapper">
-                        <p class="image-wrapper__text">Text</p>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <p class="section-title">
-                        Title about projects
-                      </p>
-                      <p class="section-subtitle">
-                        Subtitle
-                      </p>
-                      <div class="image-wrapper">
-                        <p class="image-wrapper__text">Text</p>
+                </div>
+                <!-- <div class="text-col">
+                  <p class="date">2008</p>
+                  <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, perferendis? Aut
+                    deserunt, exercitationem et nostrum harum aliquam libero distinctio id laborum quia odit laudantium
+                    cum, ea nemo molestiae officiis unde!</p>
+                  <p class="date">2009</p>
+                  <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, perferendis? Aut
+                    deserunt, exercitationem et nostrum harum aliquam libero distinctio id laborum quia odit laudantium
+                    cum, ea nemo molestiae officiis unde!</p>
+                </div>
+                <div class="text-col">
+                  <p class="date">2010</p>
+                  <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, perferendis? Aut
+                    deserunt, exercitationem et nostrum harum aliquam libero distinctio id laborum quia odit laudantium
+                    cum, ea nemo molestiae officiis unde!</p>
+                  <p class="date">2011</p>
+                  <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, perferendis? Aut
+                    deserunt, exercitationem et nostrum harum aliquam libero distinctio id laborum quia odit laudantium
+                    cum, ea nemo molestiae officiis unde!</p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="section-desktop hobby-slide">
+          <div class="inactive-content">
+            <div class="left">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+              </div>
+              <div class="slide-name">hobby</div>
+            </div>
+            <div class="right">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+              </div>
+              <div class="slide-name">hobby</div>
+            </div>
+          </div>
+          <div class="active-content">
+            <div class="slide-left">
+              <div class="relative">
+                <div class="slide-name">
+                  hobby
+                </div>
+                <div class="slide-image">
+                  <img src="/assets/img/primary/hobby2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="slide-right container">
+              <div class="desktop-vertical-slider">
+                <div class="swiper-button-next hobbydesktop-next"></div>
+                <div class="swiper-button-prev hobbydesktop-prev"></div>
+                <div class="swiper hobbydesktop-" id="hobbyDesktopSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <p class="section-title">
-                        Title about projects
-                      </p>
-                      <p class="section-subtitle">
-                        Subtitle
-                      </p>
-                      <div class="image-wrapper">
-                        <p class="image-wrapper__text">Text</p>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="d-flex flex-column">
-                      <p class="section-title">
-                        Title about projects
-                      </p>
-                      <p class="section-subtitle">
-                        Subtitle
-                      </p>
-                      <div class="image-wrapper">
-                        <p class="image-wrapper__text">Text</p>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next projects-next"></div>
-            <div class="swiper-button-prev projects-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="section-desktop projects-slide">
+          <div class="inactive-content">
+            <div class="left">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+
+              </div>
+              <div class="slide-name">projects</div>
+            </div>
+            <div class="right">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+              </div>
+              <div class="slide-name">projects</div>
+            </div>
+          </div>
+          <div class="active-content">
+            <div class="slide-left">
+              <div class="slide-name">
+                projects
+              </div>
+              <div class="slide-image">
+              </div>
+            </div>
+            <div class="slide-right container">
+              <div class="desktop-vertical-slider">
+                <div class="swiper-button-next projectsdesktop-next"></div>
+                <div class="swiper-button-prev projectsdesktop-prev"></div>
+                <div class="swiper projectsdesktop-" id="projectsDesktopSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="section-desktop media-slide">
+          <div class="inactive-content">
+            <div class="left">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+              </div>
+              <div class="slide-name">media</div>
+            </div>
+            <div class="right">
+              <div class="direction">
+                <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L11.5 11.5L2 2" stroke="white" stroke-width="3" />
+                </svg>
+
+              </div>
+              <div class="slide-name">media</div>
+            </div>
+          </div>
+          <div class="active-content">
+            <div class="slide-left">
+              <div class="relative">
+                <div class="slide-name">
+                  media
+                </div>
+                <div class="slide-image">
+                  <img src="/assets/img/primary/media2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="slide-right container">
+              <div class="desktop-vertical-slider">
+                <div class="swiper-button-next mediadesktop-next"></div>
+                <div class="swiper-button-prev mediadesktop-prev"></div>
+                <div class="swiper mediadesktop-" id="mediaDesktopSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desktop-vertical-slide">
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                        <a href="">
+                          <p class="title">Title</p>
+                          <p class="subtitle">Subtitle</p>
+                          <div class="image"></div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="section" data-name="media" data-order="4">
-      <div class="slide-1">
-        <img class="section-img" src="/assets/img/primary/media2.png" alt="">
-        <p class="section-name">media</p>
-      </div>
-      <div class="slide-2">
-        <div class="media">
-          <h3 class="section-title">
-            Title about projects
-          </h3>
-          <h6 class="section-subtitle">
-            Subtitle
-          </h6>
-          <div class="podcast-row">
-            <div class="podcast-col">
-              <div class="item"><img src="/assets/img/media/1.png" alt="">
-                <p>03/05/2022</p>
+  </div>
+
+  <!-- 
+  Это слайдер, который включается при клике на любую вкладку из primary,
+  весь новый контент по этим вкладкам - когда они в открытом виде - добавлять сюда
+-->
+  <div id="innerSliderPolygon">
+    <div class="section-slider inner-section-slider">
+      <div class="swiper" id="innerPrimarySlider">
+        <div class="swiper-wrapper inner-primary-slider-wrapper">
+          <div class="swiper-slide">
+            <div class="about">
+              <div class="vertical-text-slider">
+                <div class="swiper-button-next vertical-text-next"></div>
+                <div class="swiper-button-prev vertical-text-prev"></div>
+                <div class="swiper" id="mobileVerticalTextSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="vertical-text-slider__slide">
+                        <p class="date">2008</p>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo recusandae
+                          ratione,
+                          soluta
+                          illum
+                          est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam odit
+                          magni
+                          illo
+                          veniam quod
+                          maiores!</p>
+                        <p class="date">2009</p>
+                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, earum? Excepturi
+                          maxime,
+                          dolore
+                          voluptas, inventore doloribus ipsa incidunt laborum vero sint, aliquam reiciendis. Debitis
+                          error quos
+                          officia dolor
+                          veniam recusandae.</p>
+                        <p class="date">2010</p>
+                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, earum? Excepturi
+                          maxime,
+                          dolore
+                          voluptas, inventore doloribus ipsa incidunt laborum vero sint, aliquam reiciendis. Debitis
+                          error quos
+                          officia dolor
+                          veniam recusandae.</p>
+                        <p class="date">2011</p>
+                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, earum? Excepturi
+                          maxime,
+                          dolore
+                          voluptas, inventore doloribus ipsa incidunt laborum vero sint, aliquam reiciendis. Debitis
+                          error quos
+                          officia dolor
+                          veniam recusandae.</p>
+                        <p class="date">2012</p>
+                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, earum? Excepturi
+                          maxime,
+                          dolore
+                          voluptas, inventore doloribus ipsa incidunt laborum vero sint, aliquam reiciendis. Debitis
+                          error quos
+                          officia dolor
+                          veniam recusandae.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="item"><img src="/assets/img/media/2.png" alt="">
-                <p>03/05/2022</p>
+              <!-- <p class="date">2008</p>
+              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo recusandae
+                ratione,
+                soluta
+                illum
+                est dolores dolore repellat minima repudiandae iure corrupti? Ullam suscipit laboriosam odit
+                magni
+                illo
+                veniam quod
+                maiores!</p>
+              <p class="date">2009</p>
+              <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, earum? Excepturi
+                maxime,
+                dolore
+                voluptas, inventore doloribus ipsa incidunt laborum vero sint, aliquam reiciendis. Debitis
+                error quos
+                officia dolor
+                veniam recusandae.</p> -->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hobby">
+              <p class="section-name section-name__scrolled_no-animation" data-position-hobby="inner">hobby</p>
+              <div class="mobile-vertical-slider">
+                <div class="swiper-wrapper">
+                  <!-- Slider main container -->
+                  <div class="hobby-slider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <div class="d-flex flex-column">
+                          <p class="section-title">
+                            Title about hobby
+                          </p>
+                          <p class="section-subtitle">
+                            Subtitle
+                          </p>
+                          <div class="image-wrapper">
+                            <p class="image-wrapper__text">Text</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="d-flex flex-column">
+                          <p class="section-title">
+                            Title about hobby
+                          </p>
+                          <p class="section-subtitle">
+                            Subtitle
+                          </p>
+                          <div class="image-wrapper">
+                            <p class="image-wrapper__text">Text</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="d-flex flex-column">
+                          <p class="section-title">
+                            Title about hobby
+                          </p>
+                          <p class="section-subtitle">
+                            Subtitle
+                          </p>
+                          <div class="image-wrapper">
+                            <p class="image-wrapper__text">Text</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next hobby-next"></div>
+                <!-- <div class="swiper-button-prev hobby-prev"></div> -->
               </div>
             </div>
-            <div class="podcast-col">
-              <div class="item"><img src="/assets/img/media/1.png" alt="">
-                <p>03/05/2022</p>
-              </div>
-              <div class="item"><img src="/assets/img/media/2.png" alt="">
-                <p>03/05/2022</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="projects">
+              <p class="section-name section-name__scrolled_no-animation" data-position-projects="inner">projects</p>
+              <div class="mobile-vertical-slider">
+                <div class="swiper-wrapper">
+                  <!-- Slider main container -->
+                  <div class="swiper projects-slider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <div class="d-flex flex-column">
+                          <a href="single.html" class="d-flex flex-column">
+                            <p class="section-title">
+                              Title about projects
+                            </p>
+                            <p class="section-subtitle">
+                              Subtitle
+                            </p>
+                            <div class="image-wrapper">
+                              <p class="image-wrapper__text">Text</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="d-flex flex-column">
+                          <p class="section-title">
+                            Title about projects
+                          </p>
+                          <p class="section-subtitle">
+                            Subtitle
+                          </p>
+                          <div class="image-wrapper">
+                            <p class="image-wrapper__text">Text</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="d-flex flex-column">
+                          <p class="section-title">
+                            Title about projects
+                          </p>
+                          <p class="section-subtitle">
+                            Subtitle
+                          </p>
+                          <div class="image-wrapper">
+                            <p class="image-wrapper__text">Text</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next projects-next"></div>
+                <!-- <div class="swiper-button-prev projects-prev"></div> -->
               </div>
             </div>
-            <div class="podcast-col">
-              <div class="item"><img src="/assets/img/media/1.png" alt="">
-                <p>03/05/2022</p>
-              </div>
-              <div class="item"><img src="/assets/img/media/2.png" alt="">
-                <p>03/05/2022</p>
-              </div>
-            </div>
-            <div class="podcast-col">
-              <div class="item"><img src="/assets/img/media/1.png" alt="">
-                <p>03/05/2022</p>
-              </div>
-              <div class="item"><img src="/assets/img/media/2.png" alt="">
-                <p>03/05/2022</p>
-              </div>
-            </div>
-            <div class="podcast-col">
-              <div class="item"><img src="/assets/img/media/1.png" alt="">
-                <p>03/05/2022</p>
-              </div>
-              <div class="item"><img src="/assets/img/media/2.png" alt="">
-                <p>03/05/2022</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="media">
+              <h3 class="section-title">
+                Title about projects
+              </h3>
+              <h6 class="section-subtitle">
+                Subtitle
+              </h6>
+              <div class="podcast-row">
+                <div class="swiper" id="mediaSlider">
+                  <div class="swiper-wrapper media-slider">
+                    <div class="swiper-slide">
+                      <div class="podcast-col">
+                        <div class="item"><img src="/assets/img/media/1.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                        <div class="item"><img src="/assets/img/media/2.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="podcast-col">
+                        <div class="item"><img src="/assets/img/media/1.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                        <div class="item"><img src="/assets/img/media/2.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="podcast-col">
+                        <div class="item"><img src="/assets/img/media/1.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                        <div class="item"><img src="/assets/img/media/2.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="podcast-col">
+                        <div class="item"><img src="/assets/img/media/1.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                        <div class="item"><img src="/assets/img/media/2.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="podcast-col">
+                        <div class="item"><img src="/assets/img/media/1.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                        <div class="item"><img src="/assets/img/media/2.png" alt="">
+                          <p>03/05/2022</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
