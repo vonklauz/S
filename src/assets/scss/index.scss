@@ -26,24 +26,30 @@ $duration: .25s;
 
 // Главная страница и общие компоненты
 @import '_header';
-@import '_modal';
 @import '_primary';
 @import '_footer';
-@import '_checkbox';
 
 @import '_about';
 @import '_animations';
-@import '_media_control';
-@import '_sliders';
+@import '_black-single';
 @import '_calendar';
+@import '_contacts';
+@import '_media_control';
+@import '_news';
+@import '_sliders';
+
+html {
+    background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
+}
 
 body {
     background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
     min-height: 100vh;
 
     h1 {
-        padding-top: 92px;
-        padding-left: 93px !important;
+        padding: 92px 20px 0 93px !important;
+        // padding-top: 92px;
+        // padding-left: 93px !important;
         font-size: 17px;
         line-height: 16px;
         width: 320px;
@@ -99,6 +105,10 @@ main.page-changing {
     &::before {
         bottom: 0;
     }
+}
+
+.index-main {
+    opacity: 0;
 }
 
 ul {
@@ -170,36 +180,14 @@ section {
     }
 }
 
-.widget-row {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 0;
-    min-height: 100px;
-
-    .image-wrapper {
-        cursor: pointer;
-        background-color: #C1C1C1;
-        margin-bottom: 13px;
-        // padding: 30px 18px;
-        width: calc(50% - 6.5px);
-        font-size: 19px;
-        line-height: 18px;
-        color: #FFFFFF;
-        text-align: center;
-        word-break: break-all;
-
-        &:nth-child(odd) {
-            margin-right: 13px;
-        }
-
-        img {
-            width: 100%;
+@media(max-height: 660px) {
+    body {
+        h1 {
+            width: auto;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
         }
     }
-}
-
-.widget-row::-webkit-scrollbar {
-    display: none;
 }
 
 @media (min-width: 996px) {
@@ -209,9 +197,9 @@ section {
         justify-content: center;
 
         h1 {
-            padding-top: 0;
+            padding-top: 0 !important;
             width: auto;
-            margin: 10px auto 0 auto;
+            margin: 0 auto;
             padding-left: 98px !important;
         }
     }

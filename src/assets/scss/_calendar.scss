@@ -2,36 +2,40 @@
   background-color: #282828;
 }
 
+.calendar-date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #282828;
+  font-family: $bold;
+  text-align: center;
+  padding: 12px;
+
+  p {
+    &:first-of-type {
+      font-size: 13px;
+      line-height: 12px;
+      margin-bottom: 5px;
+    }
+
+    &:last-of-type {
+      font-size: 38px;
+      line-height: 36px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.calendar-img {
+  position: relative;
+}
+
 .calendar-item {
   position: relative;
   color: #fff !important;
   display: block;
   background-color: #282828;
   margin-bottom: 25px;
-
-  .date {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #282828;
-    font-family: $bold;
-    text-align: center;
-    padding: 12px;
-
-    p {
-      &:first-of-type {
-        font-size: 13px;
-        line-height: 12px;
-        margin-bottom: 5px;
-      }
-
-      &:last-of-type {
-        font-size: 38px;
-        line-height: 36px;
-        margin-bottom: 0;
-      }
-    }
-  }
 
   .image {
 
@@ -72,5 +76,78 @@
     font-size: 18px;
     line-height: 17px;
     padding: 10px;
+  }
+}
+
+.calendar-single {
+  padding: 0;
+  height: auto;
+  padding-top: 60px;
+
+  .left {
+    background-color: #282828;
+    padding-right: 20px;
+    margin-right: 0 !important;
+    width: calc(100% - 231px) !important;
+
+    .image {
+      position: relative;
+      width: 50% !important;
+
+      .date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #282828;
+        font-family: $bold;
+        text-align: center;
+        padding: 12px;
+
+        p {
+          &:first-of-type {
+            font-size: 13px;
+            line-height: 12px;
+            margin-bottom: 5px;
+          }
+
+          &:last-of-type {
+            font-size: 38px;
+            line-height: 36px;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
+    .bottom {
+      margin-top: 24px;
+      padding: 23px;
+      padding-top: 0;
+    }
+  }
+
+  .text {
+    p {
+      margin-bottom: 0;
+    }
+
+    .title {
+      font-size: 23px;
+      line-height: 22px;
+      margin-top: 27px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      line-height: 16px;
+      margin-bottom: 21px;
+    }
+  }
+
+  .right {
+    height: 500px;
+    width: 250px !important;
   }
 }

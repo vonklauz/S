@@ -3,7 +3,7 @@ footer {
   bottom: 0px;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 15;
   padding-top: 31px;
   padding-left: 33px;
   padding-right: 31px;
@@ -30,6 +30,12 @@ footer {
   padding-top: 31px;
     padding-left: 33px;
     padding-right: 31px;
+}
+
+@media(max-height: 660px) {
+  footer {
+    padding: 20px;
+  }
 }
 
 @media (min-width: 996px) {

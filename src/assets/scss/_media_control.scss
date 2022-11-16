@@ -18,7 +18,8 @@
     }
 
     .showed-control {
-      display: block;
+      display: flex;
+      justify-content: space-between;
     }
 
     .hidden-control {
