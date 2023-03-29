@@ -28,7 +28,7 @@
   .text {
     margin-top: 0;
     padding-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -82,9 +82,15 @@
 }
 
 .media {
-  padding: 22px 36px 34px 36px;
+  // padding: 22px 36px 34px 36px;
   background-color: #D000B6;
   height: 100%;
+
+  .section-name {
+    bottom: 138px;
+    right: calc(100% - 91px);
+    color: #000;
+  }
 
   .mobile-vertical-slider {
     .swiper-button-next {
@@ -329,11 +335,11 @@
       overflow: hidden;
 
       .swiper-button-prev {
-        top: -67px;
+        top: 13px;
       }
 
       .swiper-button-next {
-        bottom: 85px;
+        bottom: 45px;
       }
     }
 

@@ -69,14 +69,14 @@ header {
     right: 34px;
     background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000 0, #000 7.37%, #000 100%);
     z-index: 2;
-    transition: all .5s;
 
     a {
       width: 0;
       opacity: 0;
       margin-left: 0;
       visibility: hidden;
-      transition: all 1s;
+      transition: 1s width, margin 1s linear;
+      // -webkit-transition: 1s width, margin 1s linear; 
 
       img {
         max-width: 57px;
@@ -84,6 +84,7 @@ header {
     }
 
     &__opened {
+      transition: transform .2s;
       right: 20px;
       transform: rotateZ(0deg);
       width: calc(100vw - 42px);
@@ -99,12 +100,16 @@ header {
 
     &__finally_opened {
 
+      a {
+        transition: all .7s;
+      }
+
       a:not(.logo__wrapper__opened) {
         text-align: center;
-        animation: showLink 1.2s;
+        // animation: showLink 1.2s;
         // width: 70px;
         visibility: visible;
-        opacity: 1;
+        opacity: 0;
         font-size: 14px;
         line-height: 14px;
         color: #FFFFFF;
@@ -115,8 +120,7 @@ header {
       .logo__wrapper__opened {
         width: 57px;
         visibility: visible;
-        opacity: 1;
-        transition: all .5s;
+        opacity: 0;
       }
     }
   }

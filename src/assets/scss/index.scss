@@ -47,9 +47,7 @@ body {
     min-height: 100vh;
 
     h1 {
-        padding: 92px 20px 0 93px !important;
-        // padding-top: 92px;
-        // padding-left: 93px !important;
+        padding: 93px 20px 0 93px !important;
         font-size: 17px;
         line-height: 16px;
         width: 320px;
@@ -66,6 +64,10 @@ body {
 
 body *::-webkit-scrollbar {
     display: none;
+}
+
+.main-body {
+    overflow: hidden;
 }
 
 a {
@@ -206,5 +208,11 @@ section {
 
     .index-main {
         padding-bottom: 0;
+    }
+}
+
+@media(max-width: 350px) {
+    body {
+        overflow-y: auto;
     }
 }

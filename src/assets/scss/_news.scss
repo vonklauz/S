@@ -79,6 +79,11 @@
       line-height: 18px;
       margin-top: 13px;
       margin-bottom: 5px;
+
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
     }
 
     .dots {
@@ -157,6 +162,19 @@
 
       &:nth-child(3n + 3) {
         margin-right: 0;
+      }
+
+      .news-title {
+        font-size: 22px;
+        line-height: 23px;
+        margin-bottom: 23px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .news-img {
+        margin-bottom: 10px;
       }
     }
   }

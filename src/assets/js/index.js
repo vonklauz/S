@@ -146,11 +146,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const primary = utils.$el('.primary')
     const news = utils.$el('.news')
 
-    const initVerticalSlider = ($el, slidesPerView = 2, spaceBetween = 15, isNavigation = true) => {
+    const initVerticalSlider = ($el, slidesPerView = 2, spaceBetween = 20, isNavigation = true) => {
         return new Swiper($el, {
             // Optional parameters
             direction: 'vertical',
-            loop: true,
+            loop: false,
             slidesPerView: slidesPerView,
             spaceBetween: Number(spaceBetween),
             preloadImages: false,
@@ -269,7 +269,6 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburgerMenu.addEventListener('click', function (e) {
         hamburgerMenu.classList.add('hamburger__section__opened')
         hamburgerMenu.addEventListener('animationend', () => {
-            hamburgerMenu.classList.add('hamburger__section__finally_opened')
             hamburgerMenu.querySelectorAll('a').forEach((a, i) => {
                 if (i !== headerLinksCopy.length - 1) {
                     a.style.width = headerLinksCopy[i].offsetWidth + 'px'
@@ -278,6 +277,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     })
                 }
             })
+            hamburgerMenu.classList.add('hamburger__section__finally_opened')
+            hamburgerMenu.addEventListener('transitionend', () => {
+                hamburgerMenu.querySelectorAll('a').forEach((a, i) => {
+                    a.style.opacity = '1'
+                })       
+            })
+            
         })
     })
 
@@ -486,9 +492,9 @@ document.addEventListener('DOMContentLoaded', function () {
         new Swiper('.singlepagedesktop-', {
             // Optional parameters
             direction: 'vertical',
-            loop: true,
+            loop: false,
             slidesPerView: 'auto',
-            spaceBetween: 15,
+            spaceBetween: 20,
             preloadImages: false,
             lazy: true,
             scrollbar: {
