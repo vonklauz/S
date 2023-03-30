@@ -134,9 +134,16 @@ section {
 
 .section-title {
     font-size: 19px;
-    line-height: 18px;
+    line-height: 20px;
     color: #000000;
-    margin: 0 0 5px 0;
+    margin: 0 0 8px 0;
+}
+
+.media {
+    .section-title {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 
 .section-subtitle {

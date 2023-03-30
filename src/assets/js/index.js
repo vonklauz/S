@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 initVerticalTextSlider('#desktopVerticalTextSlider')
                 initVerticalSlider('.hobbydesktop-', 'auto')
                 initVerticalSlider('.projectsdesktop-', 'auto')
-                initVerticalSlider('.mediadesktop-', 'auto')
+                initVerticalSlider('.mediadesktop-', 'auto', 0)
                 utils.$el('main').style.opacity = '1'
             } else {
                 new Swiper('#innerPrimarySlider', {
@@ -387,8 +387,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         //     initVerticalSlider('.hobby-slider')
                         // }, 1700)
                         setTimeout(() => {
-                            initVerticalSlider('.projects-slider', 2, 15, false)
-                            initVerticalSlider('.podcast-slider', 2, 15, false)
+                            initVerticalSlider('.projects-slider', 2, 30, false)
+                            initVerticalSlider('.podcast-slider', 2, 40, false)
                         }, 1700)
                     }
                 })
@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function () {
             direction: 'vertical',
             loop: true,
             slidesPerView: 2,
-            spaceBetween: 24,
+            spaceBetween: 50,
             preloadImages: false,
             lazy: true,
             scrollbar: {

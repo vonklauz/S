@@ -84,26 +84,6 @@
     }
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #fff;
-    height: 19px;
-    width: 9.5px;
-    right: unset;
-    left: calc(50% - 9.5px);
-    transform: rotate(90deg);
-
-    &::after {
-      font-size: 20px;
-      color: #fff !important;
-    }
-  }
-
-  .swiper-button-next {
-    top: unset;
-    bottom: -4px;
-  }
-
   .swiper-button-prev {
     top: 30px;
     bottom: unset;
@@ -127,7 +107,7 @@
   }
 
   .image-wrapper {
-    height: calc(100% - 52px);
+    // height: calc(100% - 52px);
     width: 100%;
     // background-color: #C1C1C1;
     position: relative;
@@ -190,6 +170,32 @@
       width: 200vw;
       height: 100%;
       background: radial-gradient(184.77% 147% at 7.37% 55.34%, #000000 0%, #000000 7.37%, #000000 100%);
+    }
+
+    .swiper-slide {
+      .hobby,
+      .projects,
+      .media {
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #fff;
+          height: 19px;
+          width: 9.5px;
+          right: unset;
+          left: calc(50% + 4.25px);
+          transform: rotate(90deg);
+      
+          &::after {
+            font-size: 20px;
+            color: #fff !important;
+          }
+        }
+      
+        .swiper-button-next {
+          top: unset;
+          bottom: 15px;
+        }
+      }
     }
   }
 
@@ -529,6 +535,12 @@
         background-color: #D000B6;
       }
 
+      .title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
       .container.d-flex.p-0 {
         position: relative;
       }
@@ -553,22 +565,6 @@
           }
         }
       }
-    }
-
-    &:first-of-type {
-      .section-desktop {}
-    }
-
-    &:nth-of-type(2) {
-      .section-desktop {}
-    }
-
-    &:nth-of-type(3) {
-      .section-desktop {}
-    }
-
-    &:nth-of-type(4) {
-      .section-desktop {}
     }
   }
 
@@ -653,8 +649,8 @@
       }
 
       .title {
-        font-size: 29px;
-        line-height: 30px;
+        font-size: 22px;
+        line-height: 24px;
         margin-bottom: 10px;
       }
 
@@ -675,7 +671,7 @@
 
         img {
           max-width: 100%;
-          height: 100%;
+          // height: 100%;
         }
       }
     }
@@ -727,7 +723,7 @@
       }
 
       .title {
-        font-size: 17px;
+        font-size: 14px;
         line-height: 16px;
         font-family: $bold;
         color: #fff;

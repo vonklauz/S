@@ -175,6 +175,11 @@
 
       .news-img {
         margin-bottom: 10px;
+        height: 166px;
+
+        img {
+          height: 100%;
+        }
       }
     }
   }
@@ -183,5 +188,26 @@
     min-height: unset !important;
     height: 0 !important;
     display: none;
+  }
+}
+
+@media(min-width: 1200px) {
+  .news-wrapper {
+    .news-item {
+      .news-img {
+        height: 206px;
+      }
+    }
+  }
+}
+
+
+@media(min-width: 1400px) {
+  .news-wrapper {
+    .news-item {
+      .news-img {
+        height: 246px;
+      }
+    }
   }
 }
